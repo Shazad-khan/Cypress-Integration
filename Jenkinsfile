@@ -7,11 +7,11 @@ pipeline{
         choice(name: 'BROWSER', choices['chrome','edge','firefox'], description: "Choice the browser where you want to execute your scripts")
     }
     stages{
+        steps{
         stage('Building'){
             echo "Building the application"
         }
         stage('Testing'){
-            steps{
             sh "npm i"
             sh "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
            }
@@ -19,6 +19,5 @@ pipeline{
         stage('Deploying'){
             echo "Deplouing the application"
         }
-
     }
 }
