@@ -19,7 +19,9 @@ pipeline{
            }
         }
         stage('Deploying'){
+            steps{
             echo "Deplouing the application"
         }
+       }     
     }
 }
