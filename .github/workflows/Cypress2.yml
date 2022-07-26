@@ -1,5 +1,5 @@
 
-name: Deno
+name: Cypress2
 
 on:
   push:
