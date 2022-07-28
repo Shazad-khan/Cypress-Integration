@@ -25,7 +25,7 @@ jobs:
 
 
       - name: Installing Cypress
-        run: npm i
+        run: npm install cypress
 
       - name: Running Cypress Test
         run: npx cypress run
